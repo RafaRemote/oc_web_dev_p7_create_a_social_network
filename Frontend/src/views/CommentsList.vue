@@ -1,12 +1,14 @@
 <template>
     <main class="container">    
         <div class="col-12">
+             <!-- div incluant le titre -->
             <div class="col-12">
                 <router-link v-if="isAdmin" to='/Admin'><h1 class="my-2 btn btn-block btn-danger font-weight-bold">Administration du site</h1></router-link>
                 <Home></Home>
             </div>
             <section id="filPrincipal" class="row">
                 <sub class="col-12 col-md-4">
+                     <!-- bloc utilisateur -->
                     <article class="card bg-light my-3 class=center-block" style="float:none;">
                         <div class="card-header">
                             <div class="row justify-content-around">
@@ -27,11 +29,11 @@
                         </div>
                     </article> 
                 </sub>   
+                 <!-- bloc listes messages  -->
                 <sub class="col col-md-8">
                     <h2 class="text-white text-center m-5 ">
                         LINKS TO ALL THE MESSAGES AND THEIR COMMENTS
                     </h2>
-
                     <div class="badge btn-primary p-3 badgeList">
                             <span class="spanBadge">DATE</span>  
                             <span class="spanBadge">AUTEUR</span>

@@ -1,11 +1,15 @@
+<!--  Page qui represente la vue sur une image en particulier, avec ses commentaires si il y a -->
+
 <template>
     <main class="container">  
+         <!-- titre -->
         <div class="row mb-4 rounded">
             <p class="col-12 my-2 btn  btn-block btn-info badgeTopColor font-weight-bold" style="background-color: #138400" >Vous consultez les commentaires</p>  
             <Home></Home>
         </div>
         <div class="row">
-            <article id="panelComment" class="col-12 col-md-4" >
+            <!-- bloc utilisateur -->
+            <article id="panelComment" class="col-12 col-md-4" > 
                 <div class="card mb-3">
                     <div class="card-header">
                         <div class="row justify-content-around">
@@ -30,6 +34,7 @@
                     </div>
                 </div>
             </article>
+            <!--Section message -->
             <section class="card col-12 col-md-8 bg-light mb-3">
                 <div class="card-header bg-light d-flex align-items-center justify-content-between m-0 p-1">
                     <span class=" text-dark text-bold  p-1" > 
@@ -55,6 +60,7 @@
                 </div>
             </section> 
         </div>
+         <!-- section commentaire(s) -->
         <section class="row">
             <router-link to='/CreateComment'><p  v-if="comments.length == 0" class='mt-3 btn btn-sm btn-block btn-danger font-weight-bold'> Aucun commentaire pour l'instant, soyez le premier à en créer un !</p></router-link>
             <div v-for="comment in comments" :key="comment" class="card col-12 mt-3">
@@ -136,16 +142,12 @@ export default {
         });
     },
     methods: {
+
         localClear() {
             localStorage.clear();
             router.push({ path : "/" });
         },
-        deleteMessage(a, b, c) {
-            console.log(
-                typeof a, a,
-                typeof b, b,
-                typeof c, c
-            )
+        deleteMessage(messageId, messageUserId, currentUserId) {
             let confirmMessageDeletion = confirm("voulez-vous vraiment supprimer cette image ?, tous les commentaires associés seront également supprimés.");
             if (confirmMessageDeletion == true) {
                 axios.delete("http://localhost:3000/api/messages/", {
@@ -153,9 +155,9 @@ export default {
                         "Authorization": "Bearer " + localStorage.getItem("token") 
                     },
                     params: {
-                        messageId:  a,
-                        messageUid: b,
-                        uid:        c
+                        messageId:  messageId,
+                        messageUid: messageUserId,
+                        uid:        currentUserId
                     }
                     })
                 .then((res)=> console.log(res))
@@ -168,12 +170,8 @@ export default {
             }
 
         },
-        deleteComment(a, b, c) {
-            console.log(
-                typeof a, a,
-                typeof b, b,
-                typeof c, c
-            )
+        deleteComment(commId, commUid, currentUid) {
+
             let confirmCommentDeletion = confirm("voulez-vous vraiment suppimer votre commentaire ?");
             if (confirmCommentDeletion == true) {
                 axios.delete("http://localhost:3000/api/comments/", {
@@ -181,9 +179,9 @@ export default {
                         "Authorization": "Bearer " + localStorage.getItem("token") 
                     },
                     params: {
-                        commentId:     a,
-                        commentUid:    b,
-                        currentUid:    c
+                        commentId:     commId,
+                        commentUid:    commUid,
+                        currentUid:    currentUid
                     }
                 })
                 .then((res)=> {

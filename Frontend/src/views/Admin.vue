@@ -1,12 +1,16 @@
+<!-- Pade d'administration du site -->
+
 <template>
     <div class="container">    
-        <main class="col-12">    
+        <main class="col-12">   
+             <!-- section incluant le titre --> 
             <section class="col-12">
                 <h1 class="my-2 btn btn-block btn-danger font-weight-bold" style="cursor:default">Administration du site</h1>
                  <Home></Home>
             </section>
             <section id="filPrincipal" class="row">
                 <div class="col-12 col-md-4">
+                     <!-- bloc utilisateur -->
                     <article class="card bg-light my-3 class=center-block" style="float:none;">
                         <div class="card-header">
                             <div class="row justify-content-around">
@@ -30,8 +34,9 @@
                         </div>
                     </article> 
                 </div>   
+                 <!-- bloc choix (to comment list ou user list) -->
                 <article class="col col-md-8 mt-5">
-                    <h1 class="text-white text-center m-5 ">FAITES VOTRE CHOIX</h1>
+                    <h2 class="text-white text-center m-5 ">FAITES VOTRE CHOIX</h2>
                     <div class="row justify-content-around">
                         <button @click="toCommentsList()" class="btn btn-warning rounded shadow font-weight-bold p-5 m-2">MESSAGES/COMMENTS</button>
                         <button @click="toUsersList()" class="btn btn-warning rounded shadow font-weight-bold p-5 m-2" >USERS</button>

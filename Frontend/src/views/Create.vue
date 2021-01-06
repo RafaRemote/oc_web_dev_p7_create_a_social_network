@@ -1,5 +1,6 @@
   <template>
     <main class="container"> 
+        <!-- Un seul bloc pour le contenu creation message -->
         <section class="row card bg-light m-5 p-3">
             <form enctype="multipart/form-data">
                 <div class="header p-1">
@@ -28,7 +29,7 @@
                     <router-link to="/Stream"> <div> <a class="btn btn-danger btn-block m-2 p-2">Annuler/Retour</a></div></router-link> 
                 </div>
                  <div v-show="isInvalid" class="invalidBox m-2" key="invalid">
-                        <p>Vous ne pouvez pas envoyer de post sans contenu (vous devez inclure texte et image). Votre message doit faire moins de 1500 caractères.</p>        
+                    <p>Vous ne pouvez pas envoyer de post sans contenu (vous devez inclure texte et image). Votre message doit faire moins de 1500 caractères.</p>        
                 </div>  
             </form>
         </section>

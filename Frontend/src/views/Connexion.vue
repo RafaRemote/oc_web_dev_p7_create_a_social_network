@@ -1,5 +1,6 @@
 <template>
     <main class="container">
+         <!-- une seule section contenant le module de connexion -->
         <section class="col-7 mt-3 mx-auto p-5 bg-light rounded">  
             <form @submit.prevent="handleSubmit">
                 <p class="text-center"><img  src="../assets/login.svg" alt="login_svg" style="width:10rem" /></p>

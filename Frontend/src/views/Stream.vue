@@ -6,6 +6,7 @@
                 <h1  v-else class='col-12 my-2 btn  btn-block btn-danger font-weight-bold' style="cursor:default"> Aucune publication pour l'instant, soyez le premier à en créer une ! </h1>
             </div>
             <section id="filPrincipal" class="row">
+                 <!-- bloc utilisateur -->
                 <article class="col-12 col-md-4">
                     <div class="card bg-light my-3 class=center-block" style="float:none;">
                         <div class="card-header">
@@ -28,6 +29,7 @@
                         </div>
                     </div>                  
                 </article>
+                 <!-- bloc avec tous le(s) message(s) -->
                 <sub class="col-12 col-md-8">
                     <div v-for="message in messages" :key="message.id" class="card bg-light my-3">
                         <div class="card-header bg-light d-flex align-items-center justify-content-between m-0 p-1">

@@ -1,11 +1,13 @@
 <template>
     <main class="container">    
         <div class="col-12">
+             <!-- div contenant le titre -->
             <div class="col-12">
                <router-link v-if="isAdmin" to='/Admin'><h1 class="my-2 btn btn-block btn-danger font-weight-bold">Administration du site</h1></router-link>
                <Home></Home>
             </div>
             <section id="filPrincipal" class="row">
+                 <!-- bloc utilisateur -->
                 <article class="col-12 col-md-4">
                     <div class="card bg-light my-3 class=center-block" style="float:none;">
                         <div class="card-header">
@@ -27,7 +29,8 @@
                             <button class="btn btn-dark rounded" style="cursor:default">Vous pouvez supprimer les utilisateurs que vous voulez.</button>
                         </div>
                     </div> 
-                </article>   
+                </article> 
+                 <!-- bloc listes utilisateurs -->  
                 <sub class="col col-md-8">
                     <h2 class="text-white text-center m-5 ">
                         LISTE DE TOUS LES UTILISATEURS

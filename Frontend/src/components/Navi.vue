@@ -1,3 +1,5 @@
+<!-- Composant represantant la " banner du haut de page avec le logo de l'entreprise et l'accès au mail " -->
+
 <template>
     <div class="container">
         <div class="row">

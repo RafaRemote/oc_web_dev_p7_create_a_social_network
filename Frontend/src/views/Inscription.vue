@@ -1,5 +1,6 @@
 <template>
     <main class="container">
+         <!-- un seul bloc contenant le module d'inscription -->
         <section class="col-7 mt-3 mx-auto p-5 bg-light rounded">
             <form @submit.prevent="sendForm(event)">
                 <p class="text-center m-3"> <img src="../assets/signup.svg" alt="signup svg" style="width:10rem"> </p>

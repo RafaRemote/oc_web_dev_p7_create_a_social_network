@@ -1,5 +1,6 @@
   <template>
     <main class="container">
+         <!-- un seul bloc pour la creation de commentaire -->
         <section class="row card bg-light m-5 p-3">
             <form enctype="multipart/form-data">
                 <div class="header">
@@ -63,7 +64,7 @@ export default {
                 .then(()=> {
                     this.UserId = ""
                     this.newMessage = ""
-                    
+            
                     alert('Commentaire Posté!')
                     router.push({path : 'Comment'})
                     

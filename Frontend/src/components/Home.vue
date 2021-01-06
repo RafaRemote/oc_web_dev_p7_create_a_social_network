@@ -1,3 +1,5 @@
+<!-- composant pour le logo Maison, qui renvoie a la page principale ( " Stream " ) -->
+
 <template>
     <header class="container">
         <div class="row justify-content-center">

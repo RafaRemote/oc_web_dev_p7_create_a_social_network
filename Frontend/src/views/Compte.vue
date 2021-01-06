@@ -2,12 +2,14 @@
     <main class="container">    
         <div class="row justify-content-center">
             <div class="col-10">
+                 <!-- div contenant le titre -->
                 <div class="col-12">
-                    <p class="my-2 btn btn-block btn-info font-weight-bold" style="cursor:default">Vous consultez vote compte</p>
+                    <h1 class="my-2 btn btn-block btn-info font-weight-bold" style="cursor:default">Vous consultez vote compte</h1>
                     <Home></Home>
                 </div>
-                <div id="filPrincipal" class="row">
+                <section id="filPrincipal" class="row">
                     <div class="col-12">
+                         <!-- bloc utilisateur -->
                         <div class="card bg-light my-3 class=center-block" style="float:none;">
                             <div class="card-header">
                                 <div class="row justify-content-around">
@@ -28,7 +30,7 @@
                             </div>
                         </div> 
                     </div>  
-                </div>
+                </section>
             </div>
         </div>
     </main>
