@@ -7,15 +7,9 @@
 * Il vous faudra avoir installé sur votre machine:
     * Node.js (et donc npm),
     * MySQL,
-    * GIT.
+    * Git.
 
-- Créer un dossier vide.
-- Ouvrez un terminal et initalisez le dossier avec git avec la commande ci-dessous:
-
-```bash
-git init
-```
-- cloner ce repository:
+- Créer un dossier vide et cloner ce repository à l'intérieur:
 
 ```bash
 git clone https://github.com/RafaRemote/P7-Groupomania.git
@@ -26,7 +20,6 @@ git clone https://github.com/RafaRemote/P7-Groupomania.git
 ## DANS LE DOSSIER FRONTEND
 
 - Ouvrez un premier terminal et faites:
-
 
 ```bash 
 npm install
@@ -50,26 +43,35 @@ App running at:
 
 - Ouvrez un deuxième terminal.
 
-- Connectez vous à vous à mysql.
+- Connectez-vous à mysql.
 
 - Dans les settings de votre ordinateur, assurez vous qu'une instance MySQL soit bien active.
 
-- Importez le fichier " query sql "
+- Importez le fichier " initialisationBdd.sql "
 
 ```bash
-mysql> source (chemin vers le fichier query.sql)
+mysql> source (chemin vers le fichier initialisationBdd.sql)
 ```
 
 Ceci va créer une base de données nommée "groupomania"
 
-
 ## DANS LE DOSSIER BACKEND
 
-- Ouvrez le fichier " .env.initial " : indiquer votre mot de passe MySQL ainsi qu'une valeur de votre choix pour la variable TKN_SECRET.
+- Ouvrez le fichier " .env.initial " : vous devez assigner des valeurs aux 3 variables suivantes:
+
+```bash
+DB_USER = 
+DB_PASS = 
+TKN_SECRET = 
+```
+
+DB_USER: votre nom d'utilisateur pour votre base de données.
+DB_USER: votre mot de passe pour votre base de données.
+TKN_SECRET = variable de votre choix.
 
 - Ouvrez un deuxième terminal.
 
-- Sauvegarder et renommer ce dossier " .env " à la place de " .env.initial ".
+- Renommer ce dossier " .env " à la place de " .env.initial ".
 
 - Puis faites:
 
@@ -89,10 +91,14 @@ node server
 
 - Vous voyez l'écran de connexion à l'application. Allez dans la rubrique INSCRIPTION, inscrivez l'utilisateur de votre choix en suivant les instructions, puis connectez-vous.
 
-- Pour avoir le privilège d'Adminstrateur, revenez dans voter terminal connecté à MySQL, et importez le fichier query2.sql. Cela attribuera au premier utilisateur crêê (User id=1), les privilèges d'administration (isAdmin=1).
+- Pour avoir le privilège d'Adminstrateur, revenez dans votre terminal connecté à MySQL, et importez le fichier setAdmin.sql. 
+
+```bash
+mysql> source (chemin vers le fichier setAdmin.sql)
+```
+
+Cela attribuera au premier utilisateur créé (User id=1), les privilèges d'administration (isAdmin=1).
+
+Le site vous permet de partager des images et de les commenter, les vôtres et celles des autres. Vous pouvez supprimer votre compte. L'administrateur peut supprimer les comptes de n'importe qui, ainsi que les commentaires et les images.
 
 Bonne naviguation!
-
-
-
-
