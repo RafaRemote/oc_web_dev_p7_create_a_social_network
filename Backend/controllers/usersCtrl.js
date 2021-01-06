@@ -74,11 +74,9 @@ exports.deleteMyAccount = (req, res, next) => {
     console.log(" USER ACCOUNT DELETION PROCESS ")
     console.log(" user Id is: " + req.params.id)
 
-    User.destroy({ where: { id: req.params.id}})
-    Message.destroy({ where: { UserId: req.params.id }})
     Comment.destroy({ where: { UserId: req.params.id }})
-    .then((res) => {
-            res.status(200).json({ message: "User, its Messages and its comments have been destroyed" })
-    })
-    .catch(error => res.status(400).json({ error }))
+    Message.destroy({ where: { UserId: req.params.id }})
+    User.destroy({ where: { id: req.params.id }}) 
+    .then( () => res.status(200).json({message: "ok"}))
+    .catch(error => console.log(error))
 }

@@ -11,7 +11,7 @@ exports.createMessage = (req, res, next) => {
 //     if (!req.body.UserId || !req.body.message || !req.body.messageUrl || req.body.message.length > 1500) {
 //         return res.status(400).json({message: "one ore more parameters missing or message too long (max length is 1500"})
 // } else {
-    console.log('req.body' + req.body.messageUrl);
+    console.log('ligne 14 req.body' + req.body.messageUrl);
     let imagePost = "";
     if (req.file) { 
         imagePost = `${req.protocol}://${req.get("host")}/images/${req.file.filename}` 

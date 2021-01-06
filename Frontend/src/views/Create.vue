@@ -65,6 +65,8 @@ export default {
         send() {
             if ( !this.file || !localStorage.getItem('userName') || !this.newMessage || this.newMessage > 1500 ) {
                     this.isInvalid = true;
+
+                    console.log("ligne 69" + this.file)
             } else {
                 const formData = new FormData()
                 formData.append("image", this.file)
