@@ -32,7 +32,7 @@
                  <!-- bloc listes messages  -->
                 <sub class="col col-md-8">
                     <h2 class="text-white text-center m-5 ">
-                        LINKS TO ALL THE MESSAGES AND THEIR COMMENTS
+                        Liens vers tous les messages et leurs commentaires.
                     </h2>
                     <div class="badge btn-primary p-3 badgeList">
                             <span class="spanBadge">DATE</span>  
