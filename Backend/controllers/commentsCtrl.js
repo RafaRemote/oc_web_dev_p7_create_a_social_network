@@ -58,6 +58,8 @@ exports.deleteComment = (req, res, next) => {
     console.log(" is it the author of the comment who ask the deletion or is he Admin (admin is uid=1 so should be currentUid = 1) ? ") + 
     console.log(" if True => delete the comment ")
     console.log(" if False => unauthorized ")
+
+    
   Comment.destroy({ where: { id: req.query.commentId }})
         .then(() => res.status(200).json({ message: "Commentaire supprimé !" }))
         .catch(error => res.status(400).json({ error }))

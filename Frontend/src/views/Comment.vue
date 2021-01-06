@@ -181,15 +181,15 @@ export default {
                         "Authorization": "Bearer " + localStorage.getItem("token") 
                     },
                     params: {
-                    commentId:     a,
-                    commentUid:    b,
-                    currentUid:    c
-                }
+                        commentId:     a,
+                        commentUid:    b,
+                        currentUid:    c
+                    }
                 })
                 .then((res)=> {
                     console.log(res);
-                     alert('Cliquez sur ok et le commentaire sera supprimé');
-                     location.reload();
+                    alert('Cliquez sur ok et le commentaire sera supprimé');
+                    location.reload();
                 })
                 .catch((error) => { 
                     console.log(error)
