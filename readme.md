@@ -65,13 +65,13 @@ DB_PASS =
 TKN_SECRET = 
 ```
 
-DB_USER: votre nom d'utilisateur pour votre base de données.
-DB_USER: votre mot de passe pour votre base de données.
-TKN_SECRET = variable de votre choix.
-
-- Ouvrez un deuxième terminal.
+- DB_USER: votre nom d'utilisateur pour votre base de données.
+- DB_PASS: votre mot de passe pour votre base de données.
+- TKN_SECRET = variable de votre choix.
 
 - Renommer ce dossier " .env " à la place de " .env.initial ".
+
+- Ouvrez un troisième terminal (assurez vous de bien être dans le dossier backend)
 
 - Puis faites:
 
