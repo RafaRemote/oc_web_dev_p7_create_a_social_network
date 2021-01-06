@@ -29,7 +29,7 @@ exports.signup = (req, res, next) => {
         })            
         .catch((error) => {res.status(401).json({ error})});  
         })
-      .catch((error) => { return res.status(500).json({message: " erreur serveur " + error})})
+      .catch((error) => { res.status(500).json({message: " erreur serveur " + error})})
     } else {
       res.status(400).json({message: " incorrect parameters "})
     }               
@@ -48,7 +48,7 @@ exports.login = (req, res, next) => {
     })       
   .then(user => {
     if (!user) {  
-      return res.status(404).json({ message: 'cet email n\'a pas été trouvé' }); 
+      return res.status(404).json({ message: 'email not found' }); 
     }
     bcrypt.compare(req.body.password, user.password)        
     .then(valid => {    

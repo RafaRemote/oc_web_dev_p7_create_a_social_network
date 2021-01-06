@@ -1,8 +1,9 @@
 <template>
-    <div class="container">
-        <div class="col-7 mt-3 mx-auto p-5 bg-light rounded">  
+    <main class="container">
+        <section class="col-7 mt-3 mx-auto p-5 bg-light rounded">  
             <form @submit.prevent="handleSubmit">
                 <p class="text-center"><img  src="../assets/login.svg" alt="login_svg" style="width:10rem" /></p>
+                <h1 class="text-center font-weight-bold">CONNEXION</h1>
                 <div class="form-group mt-5">
                     <label for="inputEmail">Email:</label>
                     <input v-on:keydown="isInvalid = false" v-model="inputEmail" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="votre email">    
@@ -15,14 +16,14 @@
                 </div>
                 <button type="submit" class="btn btn-primary mt-5 w-100 shadow contrastBoutonVert font-weight-bold">SE CONNECTER</button>
             </form>
-        </div>
+        </section>
         <div v-show="isInvalid" class="invalidBox m-2" key="invalid">
             Veuillez vérifier vos informations de connexion.
         </div>  
         <div class=' col-7 mx-auto mt-4'>
             <router-link to="/inscription"><button  class=' text-white p-2 w-100 border-0 rounded shadow contrastBoutonNoir font-weight-bold'>INSCRIPTION</button></router-link>
         </div>
-    </div>
+    </main>
 </template>
 
 <script>

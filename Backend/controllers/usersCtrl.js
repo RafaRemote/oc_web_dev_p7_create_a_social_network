@@ -62,7 +62,7 @@ exports.deleteOneUser = (req, res, next) => {
         Message.destroy({ where: { UserId: req.query.uid }})
         Comment.destroy({ where: { UserId: req.query.uid }})
         .then((res) => {
-                res.status(200).json({ message: "User, its Messages and its comments have been destroyed" })
+            res.status(200).json({ message: "User, its Messages and its comments have been destroyed" })
         })
         .catch(error => res.status(400).json({ error }))
     } else {

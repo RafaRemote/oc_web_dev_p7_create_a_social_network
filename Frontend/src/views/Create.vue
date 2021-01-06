@@ -1,6 +1,6 @@
   <template>
-    <div class="container"> 
-        <div class="row card bg-light m-5 p-3">
+    <main class="container"> 
+        <section class="row card bg-light m-5 p-3">
             <form enctype="multipart/form-data">
                 <div class="header p-1">
                     <h1  class="btn btn-dark" style="cursor:default">
@@ -31,8 +31,8 @@
                         <p>Vous ne pouvez pas envoyer de post sans contenu (vous devez inclure texte et image). Votre message doit faire moins de 1500 caractères.</p>        
                 </div>  
             </form>
-        </div>
-    </div>
+        </section>
+    </main>
 </template>
 
 <script>

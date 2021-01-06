@@ -1,12 +1,12 @@
 <template>
-    <div class="container">    
+    <main class="container">    
         <div class="col-12">
             <div class="col-12 ">
-                <div v-if= 'this.messages.length !== 0' class="col-12 my-2 btn  btn-block btn-info font-weight-bold" style="background-color: #138400">Dernières Publications</div>   
-                <p  v-else class='col-12 my-2 btn  btn-block btn-danger font-weight-bold' style="cursor=default"> Aucune publication pour l'instant, soyez le premier à en créer une ! </p>
+                <h1 v-if= 'this.messages.length !== 0' class="col-12 my-2 btn  btn-block btn-info font-weight-bold" style="background-color: #138400; cursor:default">Dernières Publications</h1>   
+                <h1  v-else class='col-12 my-2 btn  btn-block btn-danger font-weight-bold' style="cursor:default"> Aucune publication pour l'instant, soyez le premier à en créer une ! </h1>
             </div>
-            <div id="filPrincipal" class="row">
-                <div class="col-12 col-md-4">
+            <section id="filPrincipal" class="row">
+                <article class="col-12 col-md-4">
                     <div class="card bg-light my-3 class=center-block" style="float:none;">
                         <div class="card-header">
                             <div class="row justify-content-around">
@@ -27,8 +27,8 @@
                             <router-link to='/Create' ><button type="button" class="btn btn-dark mx-auto p-2 rounded buttonsPanel">PUBLIER</button></router-link>
                         </div>
                     </div>                  
-                </div>
-                <div class="col-12 col-md-8">
+                </article>
+                <sub class="col-12 col-md-8">
                     <div v-for="message in messages" :key="message.id" class="card bg-light my-3">
                         <div class="card-header bg-light d-flex align-items-center justify-content-between m-0 p-1">
                             <span class=" text-dark text-bold  p-1" >
@@ -52,10 +52,10 @@
                             </div>
                         </div>                             
                     </div>                        
-                </div>
-            </div>
+                </sub>
+            </section>
         </div>
-    </div>
+    </main>
 </template>
 
 <script>

@@ -1,16 +1,16 @@
 <template>
     <div class="container">    
-        <div class="col-12">
-            <div class="col-12">
-                <p class="my-2 btn btn-block btn-danger font-weight-bold" style="cursor:default">Administration du site</p>
-                <Home></Home>
-            </div>
-            <div id="filPrincipal" class="row">
+        <main class="col-12">    
+            <section class="col-12">
+                <h1 class="my-2 btn btn-block btn-danger font-weight-bold" style="cursor:default">Administration du site</h1>
+                 <Home></Home>
+            </section>
+            <section id="filPrincipal" class="row">
                 <div class="col-12 col-md-4">
-                    <div class="card bg-light my-3 class=center-block" style="float:none;">
+                    <article class="card bg-light my-3 class=center-block" style="float:none;">
                         <div class="card-header">
                             <div class="row justify-content-around">
-                                <p class="m-1"> Bonjour {{ nameCurrentUser }} ! </p>
+                                <div class="m-1"> Bonjour {{ nameCurrentUser }} ! </div>
                                 <button @click="localClear"> <img src="../assets/signout.svg" alt="sign-out" style="width:35px"/> </button>
                             </div>
                         </div>
@@ -26,19 +26,19 @@
                             </div>
                         </div>
                         <div class="card-body mx-auto">
-                            <button class="btn btn-info rounded" style="cursor:default">Vous avez le pouvoir de supprimer les messages des utilisateurs, leurs commentaires, ainsi que les utilisateurs eux-mêmes.</button>
+                            <button class="btn rounded text-white font-weight-bold" style="background-color: #dd0000;cursor: default">Vous avez le pouvoir de supprimer les messages des utilisateurs, leurs commentaires, ainsi que les utilisateurs eux-mêmes.</button>
                         </div>
-                    </div> 
+                    </article> 
                 </div>   
-                <div class="col col-md-8 mt-5">
+                <article class="col col-md-8 mt-5">
                     <h1 class="text-white text-center m-5 ">FAITES VOTRE CHOIX</h1>
                     <div class="row justify-content-around">
                         <button @click="toCommentsList()" class="btn btn-warning rounded shadow font-weight-bold p-5 m-2">MESSAGES/COMMENTS</button>
                         <button @click="toUsersList()" class="btn btn-warning rounded shadow font-weight-bold p-5 m-2" >USERS</button>
                     </div>
-                </div>
-            </div>
-        </div>
+                </article>
+            </section>
+        </main>
     </div>
 </template>
 

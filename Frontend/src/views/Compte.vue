@@ -1,5 +1,5 @@
 <template>
-    <div class="container">    
+    <main class="container">    
         <div class="row justify-content-center">
             <div class="col-10">
                 <div class="col-12">
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 </template>
 
 
@@ -80,9 +80,9 @@ export default {
                 .then((res)=> {
                     console.log(res);
                     alert('Cliquez sur ok et l\'utilisateur sera supprimé');
+                    router.replace("http://localhost:8080/api/")
                 })
                 .catch((error) => { 
-                    router.replace("http://localhost:8080/api/")
                     console.log(error)
                 })
             } else {

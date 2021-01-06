@@ -1,8 +1,9 @@
 <template>
-    <div class="container">
-        <div class="col-7 mt-3 mx-auto p-5 bg-light rounded">
+    <main class="container">
+        <section class="col-7 mt-3 mx-auto p-5 bg-light rounded">
             <form @submit.prevent="sendForm(event)">
                 <p class="text-center m-3"> <img src="../assets/signup.svg" alt="signup svg" style="width:10rem"> </p>
+                <h1 class="text-center font-weight-bold">INSCRIPTION</h1>
                 <div class="form-group">
                     <label for="inputUserName">Nom d'utilisateur:</label>
                     <input v-on:keydown="invalid = false" v-model="inputUserName" type="text" class="form-control" id="inputUserName" aria-describedby="userNameHelp" placeholder="Entrez votre nom">
@@ -20,14 +21,14 @@
                 </div>
                 <button type="submit" class="contrastBoutonVert text-white p-2 w-100 border-0 rounded shadow font-weight-bold">S'INSCRIRE</button>                          
             </form>
-        </div>  
+        </section>  
         <div v-show="invalid" class="invalidBox m-2" key="invalid">
                 Veuillez remplir tous les champs du formulaire en suivant les instructions.
                 </div>  
          <div class=' col-7 mx-auto mt-4'>
             <router-link to="/#"><button class='contrastBoutonNoir text-white p-2 w-100 border-0 rounded shadow font-weight-bold'>RETOUR A L'ECRAN DE CONNEXION</button></router-link>
         </div>
-    </div>
+    </main>
 </template>
 
 <script>
