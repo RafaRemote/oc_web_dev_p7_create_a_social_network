@@ -99,6 +99,8 @@ mysql> source (chemin vers le fichier setAdmin.sql)
 
 Cela attribuera au premier utilisateur créé (User id=1), les privilèges d'administration (isAdmin=1).
 
+Recharger la page de votre naviguateur pour voir votre compte passer de simple utilisateur à adminstrateur.
+
 Le site vous permet de partager des images et de les commenter, les vôtres et celles des autres. Vous pouvez supprimer votre compte. L'administrateur peut supprimer les comptes de n'importe qui, ainsi que les commentaires et les images.
 
 Bonne naviguation!
