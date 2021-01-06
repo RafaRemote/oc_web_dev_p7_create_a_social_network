@@ -4,7 +4,7 @@
         <section class="col-7 mt-5 mx-auto p-3 bg-light rounded">
             <form @submit.prevent="sendForm(event)">
                 <p class="text-center m-2"> <img src="../assets/signup.svg" alt="signup svg" style="width:10rem"> </p>
-                <h1 class="text-center font-weight-bold">INSCRIPTION</h1>
+                <h1 class="text-center font-weight-bold" style="font-size:4vw;" >INSCRIPTION</h1>
                 <div class="form-group">
                     <label for="inputUserName">Nom d'utilisateur:</label>
                     <input v-on:keydown="invalid = false" v-model="inputUserName" type="text" class="form-control" id="inputUserName" aria-describedby="userNameHelp" placeholder="Entrez votre nom">

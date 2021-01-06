@@ -4,7 +4,7 @@
         <section class="col-7 mt-5 mx-auto p-3 bg-light rounded">  
             <form @submit.prevent="handleSubmit">
                 <p class="text-center"><img  src="../assets/login.svg" alt="login_svg" style="width:10rem" /></p>
-                <h1 class="text-center font-weight-bold">CONNEXION</h1>
+                <h1 class="text-center font-weight-bold" style="font-size:4vw;">CONNEXION</h1>
                 <div class="form-group mt-3">
                     <label for="inputEmail">Email:</label>
                     <input v-on:keydown="isInvalid = false" v-model="inputEmail" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="votre email">    

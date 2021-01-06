@@ -52,6 +52,8 @@
     padding: .5rem;
 }
 
+
+
 @media only screen and (max-width: 768px) {
 
     #membre {
@@ -76,5 +78,9 @@
 
     .buttonsPanel {
         width: 100%;
+    }
+
+    .titreResponsive {
+        font-size:3rem;
     }
 }
