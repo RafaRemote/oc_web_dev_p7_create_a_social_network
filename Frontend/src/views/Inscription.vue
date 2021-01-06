@@ -1,9 +1,9 @@
 <template>
     <main class="container">
          <!-- un seul bloc contenant le module d'inscription -->
-        <section class="col-7 mt-3 mx-auto p-5 bg-light rounded">
+        <section class="col-7 mt-5 mx-auto p-3 bg-light rounded">
             <form @submit.prevent="sendForm(event)">
-                <p class="text-center m-3"> <img src="../assets/signup.svg" alt="signup svg" style="width:10rem"> </p>
+                <p class="text-center m-2"> <img src="../assets/signup.svg" alt="signup svg" style="width:10rem"> </p>
                 <h1 class="text-center font-weight-bold">INSCRIPTION</h1>
                 <div class="form-group">
                     <label for="inputUserName">Nom d'utilisateur:</label>
