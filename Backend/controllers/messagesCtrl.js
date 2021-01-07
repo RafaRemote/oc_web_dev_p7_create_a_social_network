@@ -107,8 +107,8 @@ exports.deleteMessage = (req, res, next) => {
     
     console.log(req.query.messageUid == req.query.uid || req.query.uid == 1)
     if(req.query.messageUid == req.query.uid || req.query.uid == 1) {
-        Message.destroy({ where: { id: req.query.messageId }})
         Comment.destroy({ where: { MessageId: req.query.messageId }})
+        Message.destroy({ where: { id: req.query.messageId }})
         .then((res) => {
                 res.status(200).json({ message: "Message and its comments have been destroyed" })
         })
