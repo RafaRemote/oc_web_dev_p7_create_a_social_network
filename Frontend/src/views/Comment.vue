@@ -52,7 +52,7 @@
                 </div> 
                 <div class="row justify-content-between p-3">
                     <div> 
-                        <p>   {{ message }} </p> 
+                        <div>   {{ message }} </div> 
                     </div> 
                     <div v-if="isAdmin || messageUserId == currentUserId">
                         <button @click="deleteMessage(messageId, messageUserId, currentUserId)" class="border-0"> <img  src="../assets/trash.svg" alt="trash" style="width:25px"> </button>
@@ -67,8 +67,8 @@
                 <div class="card-header ">
                     <p class="btn btn-dark w-100" style="cursor:default">Commentaire rédigé le {{ comment.createdAt.slice(0,10).split('-').reverse().join('/') }}  par {{ comment.User.userName.charAt(0).toUpperCase() + comment.User.userName.slice(1) }}</p>
                 </div>
-                <div class="card-body border bg-dark text-white rounded mx-2">
-                    <p> {{ comment.comment }} </p>
+                <div class="card-body border bg-dark text-white text-right rounded mx-2">
+                    <p>  {{ comment.comment }} </p>
                 </div>
                 <div class="card-footer row justify-content-between">
                     <p class="btn btn-dark w-10 text-right mx-2 " style="cursor:default">ref# <span class="badge badge-light"> {{ comment.id }}</span></p>
