@@ -1,8 +1,16 @@
-# PROJET NUMERO 7 - OPENCLASSROOMS - PARCOURS DEVELOPPEUR WEB
+# OpenClassrooms / Web Developer Path
 
-# GROUPOMANIA - CREER UN RESEAU SOCIAL D'ENTREPRISE
+## Project number 7: Create a social network
 
-## INSTRUCTIONS 
+Skills:
+
+- authenticate a user and maintain their session
+- personalize the content sent to a web client
+- manage data storage using SQL
+- implement secure data storage using SQL
+
+
+## Detailed instructions in french 🇫🇷
 
 * Il vous faudra avoir installé sur votre machine:
     * Node.js (et donc npm),
@@ -103,4 +111,4 @@ Recharger la page de votre naviguateur pour voir votre compte passer de simple u
 
 Le site vous permet de partager des images et de les commenter, les vôtres et celles des autres. Vous pouvez supprimer votre compte. L'administrateur peut supprimer les comptes de n'importe qui, ainsi que les commentaires et les images.
 
-Bonne naviguation!
+Bonne navigation!
